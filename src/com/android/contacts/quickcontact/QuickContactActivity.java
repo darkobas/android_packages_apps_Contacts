@@ -460,26 +460,28 @@ public class QuickContactActivity extends ContactsActivity {
             if (Phone.CONTENT_ITEM_TYPE.equals(info.getMimeType())) {
                 menu.add(ContextMenu.NONE, ContextMenuIds.EDIT_BEFORE_CALL,
                         ContextMenu.NONE, getString(R.string.edit_before_call));
-
+            }
+            if (Phone.CONTENT_ITEM_TYPE.equals(info.getMimeType())) {
+                menu.add(ContextMenu.NONE, ContextMenuIds.EDIT_BEFORE_CALL,
+                        ContextMenu.NONE, getString(R.string.edit_before_call));
+            }
+            // add limit length to show IP call item
+            if (info.getData().length() > MAX_NUM_LENGTH) {
+                if (MoreContactUtils.isMultiSimEnable(QuickContactActivity.this,
+                        SimContactsConstants.SUB_1)) {
+                    String sub1Name = MoreContactUtils.getMultiSimAliasesName(
+                            getApplicationContext(), SimContactsConstants.SUB_1);
+                    menu.add(ContextMenu.NONE, ContextMenuIds.IPCALL1, ContextMenu.NONE,
+                            getApplicationContext().getString(
+                            com.android.contacts.common.R.string.ip_call_by_slot, sub1Name));
                 }
-
-                // add limit length to show IP call item
-                if (info.getData().length() > MAX_NUM_LENGTH) {
-                    if (MoreContactUtils.isMultiSimEnable(QuickContactActivity.this,
-                            SimContactsConstants.SUB_1)) {
-                        String sub1Name = MoreContactUtils.getMultiSimAliasesName(
-                                getApplicationContext(), SimContactsConstants.SUB_1);
-                        menu.add(ContextMenu.NONE, ContextMenuIds.IPCALL1, ContextMenu.NONE,
-                                getApplicationContext().getString(
-                                com.android.contacts.common.R.string.ip_call_by_slot, sub1Name));
-                    }
-                    if (MoreContactUtils.isMultiSimEnable(QuickContactActivity.this,
-                            SimContactsConstants.SUB_2)) {
-                        String sub2Name = MoreContactUtils.getMultiSimAliasesName(
-                                getApplicationContext(), SimContactsConstants.SUB_2);
-                        menu.add(ContextMenu.NONE, ContextMenuIds.IPCALL2, ContextMenu.NONE,
-                                getApplicationContext().getString(
-                                com.android.contacts.common.R.string.ip_call_by_slot, sub2Name));
+                if (MoreContactUtils.isMultiSimEnable(QuickContactActivity.this,
+                        SimContactsConstants.SUB_2)) {
+                    String sub2Name = MoreContactUtils.getMultiSimAliasesName(
+                            getApplicationContext(), SimContactsConstants.SUB_2);
+                    menu.add(ContextMenu.NONE, ContextMenuIds.IPCALL2, ContextMenu.NONE,
+                            getApplicationContext().getString(
+                            com.android.contacts.common.R.string.ip_call_by_slot, sub2Name));
                     }
                 }
             }
@@ -1472,7 +1474,9 @@ public class QuickContactActivity extends ContactsActivity {
                 primaryContentDescription.append(res.getString(R.string.call_other)).append(" ");
                 header = sBidiFormatter.unicodeWrap(phone.buildDataString(context, kind),
                         TextDirectionHeuristics.LTR);
-
+                entryContextMenuInfo = new EntryContextMenuInfo(header,
+                        res.getString(R.string.phoneLabelsGroup), dataItem.getMimeType(),
+                        dataItem.getId(), dataItem.isSuperPrimary(), header);
                 if (phone.hasKindTypeColumn(kind)) {
                     text = Phone.getTypeLabel(res, phone.getKindTypeColumn(kind),
                             phone.getLabel()).toString();
@@ -2792,5 +2796,4 @@ public class QuickContactActivity extends ContactsActivity {
             return true;
         return false;
     }
-
 }
