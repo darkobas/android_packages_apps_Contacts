@@ -20,7 +20,6 @@
     android:minHeight="48dip"
     android:paddingLeft="@dimen/editor_add_field_label_left_padding"
     android:paddingStart="@dimen/editor_add_field_label_left_padding"
-    android:background="?android:attr/selectableItemBackground"
     android:focusable="true"
     android:clickable="true">
     <TextView
@@ -30,6 +29,6 @@
         android:layout_height="wrap_content"
         android:duplicateParentState="true"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="?android:attr/textColorSecondary"
+        android:textColor="#009688"
         android:text="@string/add_new_entry_for_section" />
 </FrameLayout>
