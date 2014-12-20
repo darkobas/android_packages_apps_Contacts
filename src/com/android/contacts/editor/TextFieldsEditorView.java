@@ -197,6 +197,8 @@ public class TextFieldsEditorView extends LabeledEditorView {
         boolean hidePossible = false;
 
         int fieldCount = kind.fieldList.size();
+        int hintTextColor = mContext.getResources().getColor(R.color.hint_text_color);
+
         mFieldEditTexts = new EditText[fieldCount];
         for (int index = 0; index < fieldCount; index++) {
             final EditField field = kind.fieldList.get(index);
@@ -213,7 +215,7 @@ public class TextFieldsEditorView extends LabeledEditorView {
             fieldView.setTextAppearance(getContext(), android.R.style.TextAppearance_Medium);
             fieldView.setPadding(fieldView.getPaddingLeft(), mEditTextTopPadding,
                     fieldView.getPaddingRight(), mEditTextBottomPadding);
-            fieldView.setHintTextColor(R.color.secondary_text_color);
+            fieldView.setHintTextColor(hintTextColor);
             fieldView.setGravity(Gravity.TOP);
             mFieldEditTexts[index] = fieldView;
             fieldView.setId(vig.getId(state, kind, entry, index));
