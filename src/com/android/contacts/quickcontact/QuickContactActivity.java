@@ -320,7 +320,6 @@ public class QuickContactActivity extends ContactsActivity {
     private static final String NUMBER_KEY = "number";
     private static final String PERSON_KEY = "personid";
     private static final String MODE_KEY = "mode";
-    private static final int MAX_NUM_LENGTH = 3; // add limit length to show IP call item
 
     private static final int[] mRecentLoaderIds = new int[]{
         LOADER_SMS_ID,
@@ -461,12 +460,6 @@ public class QuickContactActivity extends ContactsActivity {
                 menu.add(ContextMenu.NONE, ContextMenuIds.EDIT_BEFORE_CALL,
                         ContextMenu.NONE, getString(R.string.edit_before_call));
             }
-            if (Phone.CONTENT_ITEM_TYPE.equals(info.getMimeType())) {
-                menu.add(ContextMenu.NONE, ContextMenuIds.EDIT_BEFORE_CALL,
-                        ContextMenu.NONE, getString(R.string.edit_before_call));
-            }
-            // add limit length to show IP call item
-            if (info.getData().length() > MAX_NUM_LENGTH) {
                 if (MoreContactUtils.isMultiSimEnable(QuickContactActivity.this,
                         SimContactsConstants.SUB_1)) {
                     String sub1Name = MoreContactUtils.getMultiSimAliasesName(
@@ -483,7 +476,6 @@ public class QuickContactActivity extends ContactsActivity {
                             getApplicationContext().getString(
                             com.android.contacts.common.R.string.ip_call_by_slot, sub2Name));
                     }
-                }
             }
     };
 
