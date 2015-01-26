@@ -26,14 +26,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="48dip"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="@*android:color/secondary_text_default_material_dark" />
+        android:textColor="?android:attr/textColorSecondary" />
 
     <TextView
         android:id="@+id/secondary_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="@*android:color/secondary_text_default_material_dark"
+        android:textColor="?android:attr/textColorSecondary"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="@dimen/no_accounts_message_margin" />
 

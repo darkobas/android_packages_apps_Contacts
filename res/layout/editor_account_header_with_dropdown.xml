@@ -20,7 +20,7 @@
     android:layout_height="wrap_content"
     android:layout_width="match_parent"
     android:minHeight="48dip"
-    android:background="#424242"
+    android:background="#EEEEEE"
     android:orientation="horizontal"
     android:gravity="center_vertical"
     android:paddingLeft="@dimen/account_container_left_padding"
@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:singleLine="true"
-            android:textColor="@*android:color/secondary_text_default_material_dark"
+            android:textColor="@color/primary_text_color"
             android:ellipsize="end" />
 
         <TextView
@@ -52,8 +52,8 @@
              android:paddingRight="8dip"
              android:paddingEnd="8dip"
              android:textAppearance="?android:attr/textAppearanceSmall"
-             android:textColor="@*android:color/secondary_text_default_material_dark"
              android:singleLine="true"
+             android:textColor="@color/primary_text_color"
              android:ellipsize="end" />
 
     </LinearLayout>
