@@ -27,6 +27,7 @@
     <TextView
         android:id="@+id/kind_title"
         style="@style/EditKindSeparatorTextViewStyle"
+	android:textColor="#009688"
         android:paddingStart="0dip"
         android:paddingEnd="8dip" />
 </FrameLayout>

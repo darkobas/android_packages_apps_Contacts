@@ -51,10 +51,10 @@
     <color name="expanding_entry_card_item_separator_color">#323232</color>
 
     <!-- Color of the text on an ExpandingEntryCard button -->
-    <color name="expanding_entry_card_button_text_color">@color/primary_color</color>
+    <color name="expanding_entry_card_button_text_color">@android:color/white</color>
 
     <!-- Background color for an ExpandingEntryCard -->
-    <color name="expanding_entry_card_background_color">#424242</color>
+    <color name="expanding_entry_card_background_color">#000000</color>
 
     <!-- Color of the margin for cards -->
     <color name="card_margin_color">#f4f4f4</color>

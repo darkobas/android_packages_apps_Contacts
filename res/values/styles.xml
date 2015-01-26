@@ -183,7 +183,7 @@
     </style>
 
     <style name="ContactsActionBarTheme" parent="@android:style/Theme.Material">
-        <item name="android:textColorHint">#0288d1</item>
+        <item name="android:textColorHint">#CCCCCC</item>
         <item name="android:textColor">@android:color/white</item>
         <item name="android:popupMenuStyle">@android:style/Widget.Material.PopupMenu</item>
         <item name="android:dropDownListViewStyle">@style/ListViewDropdownStyle</item>
@@ -228,7 +228,7 @@
     </style>
 
     <style name="SectionDivider">
-        <item name="android:background">#ffffff</item>
+        <item name="android:background">#303030</item>
         <item name="android:layout_height">1dip</item>
         <item name="android:layout_width">match_parent</item>
     </style>
@@ -306,7 +306,7 @@
         <item name="android:textSize">14sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textAllCaps">true</item>
-        <item name="android:textColor">@*android:color/material_deep_teal_500</item>
+        <item name="android:textColor">@color/primary_color_dark</item>
         <item name="android:fontFamily">sans-serif</item>
     </style>
 
