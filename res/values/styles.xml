@@ -27,14 +27,12 @@
         <item name="android:colorPrimaryDark">@color/primary_color_dark</item>
         <item name="android:colorPrimary">@color/primary_color</item>
         <item name="android:colorAccent">@color/primary_color</item>
+        <item name="android:navigationBarColor">@color/primary_color_dark</item>
     </style>
 
     <style name="EditorActivityTheme" parent="@style/PeopleTheme">
         <item name="android:listViewStyle">@style/ListViewStyle</item>
         <item name="android:actionBarStyle">@style/EditorActionBarStyle</item>
-    </style>
-
-    <style name="Theme">
     </style>
 
     <style name="Theme.QuickContact" parent="@style/PeopleTheme">
@@ -50,6 +48,7 @@
         <!-- We need to use a light ripple behind ActionBar items in order for them to
              be visible when using some of the darker ActionBar tints -->
         <item name="android:actionBarItemBackground">@drawable/item_background_material_borderless_dark</item>
+        <item name="android:navigationBarColor">@color/primary_color_dark</item>
     </style>
 
         <!-- Thyrus: Split People style  to enable main style to be themeable -->
@@ -106,6 +105,7 @@
         <item name="list_item_text_indent">@dimen/contact_browser_list_item_text_indent</item>
         <!-- Favorites -->
         <item name="favorites_padding_bottom">0dip</item>
+        <item name="android:navigationBarColor">@color/primary_color_dark</item>
     </style>
 
     <style name="ContactsActionBarOverflow" parent="@android:style/Widget.Holo.ActionButton.Overflow">
