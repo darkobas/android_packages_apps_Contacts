@@ -153,7 +153,7 @@
     <style name="ContactsActionBarTitleText"
            parent="@android:style/TextAppearance.Material.Widget.ActionBar.Title">
         <!-- exposed textcolor for theming  -->
-        <item name="android:textColor">@color/exposed_ContactsActionBarTitleText</item>
+        <item name="android:textColor">@color/actionbar_text_color</item>
     </style>
 
     <!-- Styling for the tab bar; handles styling of the divider line. -->
@@ -166,7 +166,7 @@
     <style name="ContactsActionBarTabTextStyle"
            parent="android:style/Widget.Material.Light.ActionBar.TabText">
         <!-- exposed textcolor for theming  -->
-        <item name="android:textColor">@color/exposed_ContactsActionBarTabTextStyle</item>
+        <item name="android:textColor">@color/tab_text_color</item>
         <item name="android:textSize">@dimen/tab_text_size</item>
         <item name="android:fontFamily">@string/tab_font_family</item>
         <item name="android:textStyle">bold</item>
